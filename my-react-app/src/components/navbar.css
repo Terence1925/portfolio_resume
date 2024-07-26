@@ -1,0 +1,91 @@
+.navbar {
+  width: 100%;
+  height: 100px;
+  background: #21325e;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0; /* Ensure navbar is fixed at the top */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.logo {
+  height: 60px;
+  margin-right: auto; /* Pushes logo to the left */
+}
+
+.toggleButton {
+  display: flex; /* Always display toggle button */
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.toggleButton svg {
+  font-size: 50px;
+}
+
+.toggleButton button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Takes up remaining space between logo and toggleButton */
+  justify-content: center;
+  transition: opacity 0.3s ease; /* Smooth transition for showing/hiding links */
+}
+
+/* Links styling */
+.link a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 20px;
+}
+
+/* Styles for mobile view */
+@media only screen and (max-width: 600px) {
+  .toggleButton {
+    display: flex; /* Ensure toggle button is visible in mobile view */
+  }
+
+  .link {
+    display: none; /* Hide links in mobile view when collapsed */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Center links horizontally */
+    position: fixed; /* Use fixed positioning */
+    top: 100px; /* Position below the logo */
+    left: 0;
+    right: 0;
+    background: #21325e; /* Background color to match navbar */
+    padding: 20px 0; /* Space around links */
+    z-index: 1000; /* Ensure it appears above other content */
+    overflow: auto;
+  }
+
+  #open .link {
+    display: flex; /* Show links when expanded */
+  }
+
+  #open .link a {
+    margin: 10px 0; /* Space between links */
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .toggleButton {
+    display: none; /* Hide toggle button on larger screens */
+  }
+
+  .link {
+    display: flex; /* Ensure links are visible on larger screens */
+  }
+}

@@ -6,8 +6,10 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
+import usePageTitle from "./hooks/usePageTitle";
 
 function Experience() {
+  usePageTitle("Experience | Terence");
   return (
     <div className="experience">
       <VerticalTimeline lineColor="#3e497a">

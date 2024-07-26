@@ -1,0 +1,328 @@
+/* General styles for the home section */
+.home {
+  width: 100%;
+  font-family: "Arial", sans-serif;
+  color: #3e497a;
+  background: rgb(0, 36, 22);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 36, 22, 1) 22%,
+    rgba(6, 87, 160, 1) 40%,
+    rgba(121, 9, 111, 1) 69%,
+    rgba(255, 0, 0, 1) 92%
+  );
+  overflow: hidden; /* Prevent overflow */
+  position: relative;
+}
+
+@keyframes meteor {
+  0% {
+    transform: translateY(-100px) translateX(100px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(500px) translateX(-500px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.meteor {
+  position: absolute;
+  top: -100px;
+  right: 100px;
+  width: 3px;
+  height: 100px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  opacity: 0;
+  animation: meteor 3s infinite ease-in-out;
+}
+
+.meteor:nth-child(2) {
+  animation-delay: 1s;
+  top: -150px;
+  right: 200px;
+  width: 2px;
+  height: 80px;
+}
+
+.meteor:nth-child(3) {
+  animation-delay: 2s;
+  top: -200px;
+  right: 300px;
+  width: 1px;
+  height: 60px;
+}
+
+.main {
+  color: #39ff14;
+}
+
+/* Styles for the about section */
+.about {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(33, 50, 94, 0.8); /* Semi-transparent background */
+  color: #f0f0f0;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Background overlay effect */
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* Light overlay for depth */
+  z-index: -1; /* Send behind content */
+}
+
+/* Text section */
+.text-section {
+  flex: 1;
+  max-width: 50%;
+  text-align: center; /* Center align text */
+  padding: 20px;
+}
+
+/* Photo section */
+.myphoto {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+  padding: 20px;
+}
+
+.myphoto img {
+  width: 100%;
+  max-width: 300px; /* Adjust to your desired size */
+  border-radius: 10px;
+  animation: movePhoto 2s infinite alternate;
+  border-radius: 50%;
+  background-color: white;
+}
+
+@keyframes movePhoto {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+}
+
+/* Heading styles */
+.about h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem; /* Responsive font size */
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Prompt section */
+.prompt {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.prompt p {
+  margin-bottom: 10px;
+}
+
+.prompt a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #f0f0f0;
+  transition: color 0.3s ease;
+}
+
+.prompt a:hover {
+  color: #e9d35b;
+}
+
+.prompt svg {
+  font-size: 3rem;
+}
+
+/* Styles for the skills section */
+.skills {
+  font-size: 1.5rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #f4f4f4;
+  position: relative;
+  text-align: center;
+}
+
+/* Skills background with subtle pattern */
+.skills::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("path/to/your/pattern.png") repeat; /* Pattern background */
+  opacity: 0.05; /* Light opacity for subtle effect */
+  z-index: -1; /* Send behind content */
+}
+
+.skills h1 {
+  color: #3e497a;
+  margin-bottom: 20px;
+}
+
+.skills .list {
+  list-style: none;
+  width: 80%;
+  padding: 0;
+  margin: 0;
+}
+
+.list .item {
+  margin-bottom: 20px;
+}
+
+.list h2 {
+  color: #21325e;
+  margin-bottom: 10px;
+}
+
+.list span {
+  font-size: 1rem;
+  color: #555;
+}
+
+.icon-container h1 {
+  font-size: 2rem; /* Adjust the font size of h1 */
+  margin: 0; /* Remove default margin */
+  line-height: 1; /* Ensure h1 does not affect vertical alignment */
+  display: flex;
+  align-items: center; /* Center h1 vertically with icons */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section,
+  .myphoto {
+    max-width: 100%;
+  }
+
+  .myphoto img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .prompt {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .about h2 {
+    font-size: xx-large;
+  }
+
+  .prompt {
+    font-size: 0.875rem;
+  }
+
+  .myphoto img {
+    width: 200px;
+    height: 200px;
+  }
+}
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /* Adjust the gap between icons */
+  justify-content: center;
+}
+.fab {
+  font-size: 4rem;
+}
+/* Icon colors */
+.icon-container .fa-html5 {
+  color: #e34f26; /* HTML5 color */
+}
+
+.icon-container .fa-css3-alt {
+  color: #1572b6; /* CSS3 color */
+}
+
+.icon-container .fa-js {
+  color: #f7e018; /* JavaScript color */
+}
+
+.icon-container .fa-react {
+  color: #61dafb; /* ReactJS color */
+}
+
+.icon-container .fa-node {
+  color: #8cc84b; /* NodeJS color */
+}
+
+.icon-container .fa-bootstrap {
+  color: #563d7c; /* Bootstrap color */
+}
+
+.icon-container .fa-sass {
+  color: #c69; /* Sass color */
+}
+
+.icon-container .fa-yarn {
+  color: #2c8ebb; /* Yarn color */
+}
+
+.icon-container .fa-styled-components {
+  color: #db7093; /* Styled Components color */
+}
+
+.icon-container .fa-php {
+  color: #8892bf; /* PHP color */
+}
+
+.icon-container .fa-laravel {
+  color: #f05032; /* Laravel color */
+}
+
+.icon-container .fa-server {
+  color: #4e5d6c; /* Server color (default) */
+}
+
+.icon-container .fa-database {
+  color: #4e5d6c; /* Database color (default) */
+}
+.title {
+  color: #39ff14;
+}
