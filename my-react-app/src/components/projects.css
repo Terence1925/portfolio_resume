@@ -2,92 +2,11 @@
 .projects {
   width: 100%;
   padding: 50px 20px;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 36, 22, 0.8) 22%,
-    rgba(6, 87, 160, 0.8) 40%,
-    rgba(121, 9, 111, 0.8) 69%,
-    rgba(255, 0, 0, 0.8) 92%
-  );
+
   color: #f0f0f0;
   font-family: "Arial", sans-serif;
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
   margin: 20px auto;
   max-width: 800px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Heading styles */
-.projects h1 {
-  font-size: 2.5rem;
-  color: #e9d35b;
-  margin-bottom: 20px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  position: relative;
-}
-
-/* Subtitle and text styles */
-.projects p {
-  font-size: 1.2rem;
-  color: #dcdcdc;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: justify;
-}
-
-/* Skills list styles */
-.projects ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.projects ul li {
-  font-size: 1.1rem;
-  color: #f4f4f4;
-  background: rgba(33, 50, 94, 0.6);
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px 0;
-  transition: background 0.3s ease;
-}
-
-.projects ul li:hover {
-  background: rgba(33, 50, 94, 0.8);
-}
-
-/* Additional visual effects */
-.projects::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("path/to/your/pattern.png") repeat; /* Background pattern */
-  opacity: 0.1; /* Light opacity for subtle effect */
-  z-index: -1; /* Send behind content */
-}
-
-.projects .content-wrapper {
-  position: relative;
-  z-index: 1;
-}
-
-/* Responsive styles */
-@media only screen and (max-width: 768px) {
-  .projects h1 {
-    font-size: 2rem;
-  }
-
-  .projects p {
-    font-size: 1rem;
-  }
-
-  .projects ul li {
-    font-size: 1rem;
-  }
 }

@@ -7,6 +7,7 @@ import "react-vertical-timeline-component/style.min.css";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
 import usePageTitle from "./hooks/usePageTitle";
+import "./components/experience.css";
 
 function Experience() {
   usePageTitle("Experience | Terence");

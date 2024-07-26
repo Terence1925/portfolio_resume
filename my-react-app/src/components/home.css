@@ -1,5 +1,6 @@
 /* General styles for the home section */
 .home {
+  min-height: 100vh;
   width: 100%;
   font-family: "Arial", sans-serif;
   color: #3e497a;
