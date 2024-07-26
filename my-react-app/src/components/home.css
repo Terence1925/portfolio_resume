@@ -228,6 +228,7 @@
   .about {
     flex-direction: column;
     text-align: center;
+    margin-top: 70px;
   }
 
   .text-section,
